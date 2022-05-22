@@ -1,0 +1,9 @@
+name: mongo-express-chart
+apiVersion: v2
+version: "0.1.0"
+appVersion: "master"
+dependencies:
+  - name: mongodb
+    version: ~12.1.5
+    repository: https://charts.bitnami.com/bitnami
+    alias: db

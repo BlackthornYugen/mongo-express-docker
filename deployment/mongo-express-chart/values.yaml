@@ -1,0 +1,2 @@
+image: "ghcr.io/blackthornyugen/mongo-express-docker" # FIXME: Use official by default
+domain: mongo-express.example.org
