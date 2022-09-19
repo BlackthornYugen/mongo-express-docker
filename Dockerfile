@@ -12,12 +12,14 @@ ARG MONGO_EXPRESS_VERSION=1.0.0
 COPY docker-entrypoint.sh /
 
 RUN set -eux; \
-    yarn add https://github.com/mongo-express/mongo-express; \
-    chmod +x /docker-entrypoint.sh; \
+    chmod +x /docker-entrypoint.sh ; \
     apk -U add --no-cache \
         bash \
+        # Git for adding a git repo with yarn
+        git \
         # grab tini for signal processing and zombie killing
-        tini
+        tini ; \
+    yarn add https://github.com/mongo-express/mongo-express ;
 
 WORKDIR /node_modules/mongo-express
 
