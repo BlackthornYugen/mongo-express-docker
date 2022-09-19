@@ -12,7 +12,7 @@ ARG MONGO_EXPRESS_VERSION=1.0.0
 COPY docker-entrypoint.sh /
 
 RUN set -eux; \
-    yarn add mongo-express@${MONGO_EXPRESS_VERSION}; \
+    yarn add https://github.com/mongo-express/mongo-express; \
     chmod +x /docker-entrypoint.sh; \
     apk -U add --no-cache \
         bash \
